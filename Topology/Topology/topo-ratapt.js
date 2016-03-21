@@ -1,0 +1,22 @@
+#Enforcement
+Internet s5
+s5 s1
+s5 s4
+s5 s6
+s1 host1
+s1 host2
+s1 host3
+s4 s2
+s4 s3
+s6 host5
+s6 host6
+s2 host4
+s2 server1
+s2 server3
+s2 AP
+AP laptop
+AP Mobile
+s3 server1
+s3 server2
+s3 server3
+s3 server4
