@@ -1,0 +1,9 @@
+FSM FSM1 Event1 TrafficState1
+Traffic Traffic1 10.1.0.1 any 10.2.0.1 any any
+Traffic Traffic2 10.2.0.1 any 10.1.0.1 any any
+PSITrafficState TrafficState1:DAG1=DAG3 TrafficState2:DAG2=DAG4
+PSIFSMEdge State:TrafficState1=TrafficState2 Event:Event1
+DAG DAG1 PSINF:Ingress=config_in+FW=config_fw+IPS=config_ips+Egress=config_e PSINFEdge:Ingress=FW=all+FW=IPS=suspicious+FW=Egress=!suspicious+IPS=Egress=!malicious
+DAG DAG2 PSINF:Ingress=config_in+HON=config_hon PSINFEdge:Ingress=HON=all
+DAG DAG3 PSINF:Ingress=config_in+FW=config_fw+IPS=config_ips+Egress=config_e PSINFEdge:Egress=IPS=all+IPS=FW=all+FW=Ingress=all
+DAG DAG4 PSINF:Ingress=config_in+Egress=config_e PSINFEdge:Egress=Ingress=all

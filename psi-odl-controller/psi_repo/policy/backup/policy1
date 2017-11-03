@@ -1,0 +1,7 @@
+FSM FSM1 Event1 TrafficState1
+Traffic Traffic1 192.168.123.1 20 192.168.123.2 80
+DAG DAG1 PSINF:Ingress=config_in+IDS=config_ids+IPS=config_ips+Egress=config_e PSINFEdge:Ingress=IDS=all+IDS=IPS=suspicous+IDS=Egress=normal+IPS=Egress=normal
+DAG DAG2 PSINF:Ingress=config_in+IDS=config_ids2+IPS=config_ips2+Egress=config_e PSINFEdge:Ingress=IDS=all+IDS=IPS=suspicous+IDS=Egress=normal+IPS=Egress=normal
+PSITrafficState TrafficState1:DAG1 TrafficState2:DAG2
+PSIFSMEdge State:TrafficState1=TrafficState2 Event:Event1
+PSIFSMEdge State:TrafficState2=TrafficState1 Event:Event1

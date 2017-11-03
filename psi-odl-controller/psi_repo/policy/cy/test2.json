@@ -1,0 +1,293 @@
+{
+    "nodes" : [ {
+      "data" : {
+        "id" : "1816",
+        "state_to_context" : "!hasWget&http !hasWget&http;others others;",
+        "ip_address" : "",
+        "device_list" : "",
+        "scope" : "local",
+        "nf_type" : "IPS",
+        "set" : "dag1",
+        "SUID" : 1816,
+        "type" : "NF",
+        "mac_address" : "",
+        "selected" : false,
+        "has_nested_network" : false,
+        "name" : "local:IPS",
+        "state_to_event" : "wget event3;",
+        "shared_name" : "local:IPS"
+      }
+    }, {
+      "data" : {
+        "id" : "1815",
+        "state_to_context" : "",
+        "ip_address" : "10.1.0.1",
+        "device_list" : "",
+        "scope" : "",
+        "nf_type" : "",
+        "set" : "dag1",
+        "SUID" : 1815,
+        "type" : "Device",
+        "mac_address" : "",
+        "selected" : false,
+        "has_nested_network" : false,
+        "name" : "Ingress",
+        "state_to_event" : "",
+        "shared_name" : "h1"
+      }
+    }, {
+      "data" : {
+        "id" : "1814",
+        "state_to_context" : "",
+        "ip_address" : "",
+        "device_list" : "h2",
+        "scope" : "",
+        "nf_type" : "",
+        "set" : "dag1",
+        "SUID" : 1814,
+        "type" : "Scope",
+        "mac_address" : "",
+        "selected" : false,
+        "has_nested_network" : false,
+        "name" : "Egress",
+        "state_to_event" : "",
+        "shared_name" : "servers"
+      }
+    }, {
+      "data" : {
+        "id" : "1797",
+        "state_to_context" : "",
+        "ip_address" : "10.1.0.1",
+        "device_list" : "",
+        "scope" : "",
+        "nf_type" : "",
+        "set" : "dag2",
+        "SUID" : 1797,
+        "type" : "Device",
+        "mac_address" : "",
+        "selected" : false,
+        "has_nested_network" : false,
+        "name" : "Ingress",
+        "state_to_event" : "",
+        "shared_name" : "h1"
+      }
+    }, {
+      "data" : {
+        "id" : "1796",
+        "state_to_context" : "",
+        "ip_address" : "",
+        "device_list" : "h2",
+        "scope" : "",
+        "nf_type" : "",
+        "set" : "dag2",
+        "SUID" : 1796,
+        "type" : "Scope",
+        "mac_address" : "",
+        "selected" : false,
+        "has_nested_network" : false,
+        "name" : "Egress",
+        "state_to_event" : "",
+        "shared_name" : "servers"
+      }
+    }, {
+      "data" : {
+        "id" : "1795",
+        "state_to_context" : "",
+        "device_list" : "",
+        "scope" : "",
+        "nf_type" : "",
+        "set" : "dag2",
+        "SUID" : 1795,
+        "type" : "NF",
+        "mac_address" : "",
+        "selected" : false,
+        "has_nested_network" : false,
+        "name" : "Drop",
+        "state_to_event" : "",
+        "shared_name" : "Drop"
+      }
+    }, {
+      "data" : {
+        "id" : "1794",
+        "state_to_context" : "!hasWget&http !hasWget&http;others others;",
+        "ip_address" : "",
+        "device_list" : "",
+        "scope" : "local",
+        "nf_type" : "IPS",
+        "set" : "dag2",
+        "SUID" : 1794,
+        "type" : "NF",
+        "mac_address" : "",
+        "selected" : false,
+        "has_nested_network" : false,
+        "name" : "local:IPS",
+        "state_to_event" : "wget event3;",
+        "shared_name" : "local:IPS"
+      }
+    }, {
+      "data" : {
+        "id" : "1793",
+        "state_to_context" : "",
+        "ip_address" : "10.1.0.1",
+        "device_list" : "",
+        "scope" : "",
+        "nf_type" : "",
+        "set" : "subject",
+        "SUID" : 1793,
+        "type" : "Device",
+        "mac_address" : "",
+        "selected" : false,
+        "has_nested_network" : false,
+        "name" : "h1",
+        "state_to_event" : "",
+        "shared_name" : "h1"
+      }
+    }, {
+      "data" : {
+        "id" : "1792",
+        "state_to_context" : "",
+        "ip_address" : "",
+        "scope" : "",
+        "nf_type" : "",
+        "set" : "subject",
+        "SUID" : 1792,
+        "predicate" : "10.1.0.1 any 10.2.0.1 any any",
+        "type" : "TrafficSpec",
+        "mac_address" : "",
+        "selected" : false,
+        "has_nested_network" : false,
+        "name" : "TrafficSpec",
+        "state_to_event" : "",
+        "shared_name" : "TrafficSpec"
+      }
+    }, {
+      "data" : {
+        "id" : "1791",
+        "state_to_context" : "",
+        "ip_address" : "",
+        "device_list" : "",
+        "DAGs" : "dag1 dag2",
+        "scope" : "local",
+        "nf_type" : "",
+        "set" : "fsm",
+        "SUID" : 1791,
+        "type" : "State",
+        "mac_address" : "",
+        "selected" : false,
+        "has_nested_network" : false,
+        "name" : "solicited",
+        "state_to_event" : "",
+        "shared_name" : "state1"
+      }
+    }, {
+      "data" : {
+        "id" : "1790",
+        "state_to_context" : "",
+        "ip_address" : "",
+        "device_list" : "",
+        "DAGs" : "dag1 dag2",
+        "scope" : "local",
+        "nf_type" : "",
+        "set" : "fsm",
+        "SUID" : 1790,
+        "type" : "State",
+        "mac_address" : "",
+        "selected" : false,
+        "has_nested_network" : false,
+        "name" : "normal",
+        "state_to_event" : "",
+        "shared_name" : "state0"
+      }
+    } ],
+    "edges" : [ {
+      "data" : {
+        "id" : "1818",
+        "source" : "1816",
+        "target" : "1814",
+        "selected" : false,
+        "set" : "dag1",
+        "SUID" : 1818,
+        "name" : "local:IPS (interaction) servers",
+        "interaction" : "interaction",
+        "type" : "DAGEdge",
+        "shared_interaction" : "interaction",
+        "shared_name" : "local:IPS (interaction) servers"
+      }
+    }, {
+      "data" : {
+        "id" : "1817",
+        "source" : "1815",
+        "target" : "1816",
+        "selected" : false,
+        "set" : "dag1",
+        "SUID" : 1817,
+        "name" : "h1 (interaction) local:IPS",
+        "interaction" : "interaction",
+        "type" : "DAGEdge",
+        "shared_interaction" : "interaction",
+        "shared_name" : "h1 (interaction) local:IPS"
+      }
+    }, {
+      "data" : {
+        "id" : "1824",
+        "source" : "1796",
+        "target" : "1794",
+        "selected" : false,
+        "set" : "dag2",
+        "SUID" : 1824,
+        "name" : "servers (interaction) local:IPS",
+        "interaction" : "interaction",
+        "type" : "DAGEdge",
+        "shared_interaction" : "interaction",
+        "shared_name" : "servers (interaction) local:IPS"
+      }
+    }, {
+      "data" : {
+        "id" : "1826",
+        "source" : "1794",
+        "target" : "1797",
+        "selected" : false,
+        "set" : "dag2",
+        "SUID" : 1826,
+        "name" : "local:IPS (interaction) h1",
+        "label" : "!unsolicited-http",
+        "interaction" : "interaction",
+        "type" : "DAGEdge",
+        "event_context" : "others",
+        "shared_interaction" : "interaction",
+        "shared_name" : "local:IPS (interaction) h1"
+      }
+    }, {
+      "data" : {
+        "id" : "1799",
+        "source" : "1794",
+        "target" : "1795",
+        "selected" : false,
+        "set" : "dag2",
+        "SUID" : 1799,
+        "name" : "local:IPS (interaction) Drop",
+        "label" : "unsolicited-http",
+        "interaction" : "interaction",
+        "type" : "DAGEdge",
+        "event_context" : "wget",
+        "shared_interaction" : "interaction",
+        "shared_name" : "local:IPS (interaction) Drop"
+      }
+    }, {
+      "data" : {
+        "id" : "1800",
+        "source" : "1790",
+        "target" : "1791",
+        "selected" : false,
+        "set" : "fsm",
+        "SUID" : 1800,
+        "name" : "state0 (interaction) state1",
+        "label" : "wget",
+        "interaction" : "interaction",
+        "type" : "FSMEdge",
+        "event_context" : "event3",
+        "shared_interaction" : "interaction",
+        "shared_name" : "state0 (interaction) state1"
+      }
+    } ]
+}
